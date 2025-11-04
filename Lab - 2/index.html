@@ -15,7 +15,7 @@
 
 <body>
     <header>
-        <h1>Lucky Pawar</h1>
+        <h1>My Portfolio</h1>
         <nav>
             <ul>
                 <li><a href="#hero">About</a></li>
@@ -29,6 +29,7 @@
         <h1>Hello, this is my Portfolio!</h1>
         <hr>
         <section id="hero">
+            <h2>About Me:</h2>
             <img src="./Photo.jpeg" alt="Photograph of Lucky Pawar" width="300">
             <h2>Lucky Pawar</h2>
             <p>🚀 Hi, I’m a CSE undergrad who loves turning ideas into 💻 code! With skills in 🌐 HTML, 🎨 CSS, ⚡
@@ -101,22 +102,35 @@
         </section>
         <section id="contact">
             <h2>Contact Me!</h2>
-            <form>
-                <label for="name">Your Name: </label>
-                <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
-                <label for="email">Your Email: </label>
-                <input type="email" name="emial" id="email" placeholder="Enter Your E-mail" required>
-                <label for="tel">Your Phone No.: </label>
-                <input type="tel" name="tel" id="tel" pattern="[6-9][0-9]{9}" placeholder="Enter your Phone Number"
-                    required>
-                <label for="msg">Message: </label>
-                <textarea name="msg" id="msg" cols="30" rows="4"
-                    placeholder="Enter your Message">Enter your Message</textarea>
-                <input type="submit" value="Submit">
-                <br>
-                <br>
-            </form>
-            <hr>
+            <table>
+                <form>
+                    <tr>
+                        <td><label for="name">Your Name: </label></td>
+                        <td><input type="text" name="name" id="name" placeholder="Enter Your Name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Your Email: </label></td>
+                        <td><input type="email" name="emial" id="email" placeholder="Enter Your E-mail" required></td>
+                    </tr>
+                    <tr>
+
+                        <td><label for="tel">Your Phone No.: </label></td>
+                        <td><input type="tel" name="tel" id="tel" pattern="[6-9][0-9]{9}" placeholder="Enter your Phone Number" required></td>
+                    </tr>
+                    <tr>
+
+                        <td><label for="msg">Message: </label></td>
+                        <td><textarea name="msg" id="msg" cols="30" rows="3"
+                            placeholder="Enter your Message">Enter your Message</textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="Submit">
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            <hr id="last">
         </section>
         <a id="btp" href="#hero">Back to Top &#8657;</a>
     </main>

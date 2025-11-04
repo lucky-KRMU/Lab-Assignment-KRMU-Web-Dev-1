@@ -1,13 +1,17 @@
+/* Removing initial margin and padding */
 * {
     margin: 0;
     padding: 0;
 }
+
+/* giving the body background color and removing extra overflow */
 
 body {
     background-color: rgb(172, 203, 218);
     overflow-x: hidden;
 }
 
+/* styling the header */
 header {
     width: 100vw;
     height: 15vh;
@@ -24,15 +28,13 @@ header h1 {
 }
 
 header nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 2vw;
-    margin-top: 2vh;
     list-style-type: none;
     font-family: poppins, sans-serif;
     font-weight: 400;
+}
+header nav ul li{
+    display: inline-block;
+    margin: 2vh 2vw;
 }
 
 header nav ul li a {
@@ -43,6 +45,8 @@ header nav ul li a {
 header nav ul li a:hover{
     text-decoration: underline;
 }
+
+/* styling the prominent main tag components */
 
 main h1 {
     text-align: center;
@@ -58,11 +62,9 @@ main hr {
     margin: 3vh 0;
 }
 
+/* styling the hero section  */
+
 #hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 }
 
@@ -87,6 +89,8 @@ main hr {
     margin: 3vh;
 }
 
+/* styling the project section */
+
 #projects h2 {
     font-family: 'Noto sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 2vh 1vw;
@@ -104,6 +108,8 @@ main hr {
     background-color: rgb(213, 227, 235);
     cursor: pointer;
 }
+
+/* styling the skills section */
 
 #skills h2 {
     cursor: pointer;
@@ -139,62 +145,48 @@ main hr {
 
 #skills th:hover {
     background-color: rgb(213, 227, 235);
+    color: black;
 }
+
+/* styling the contact section */
 
 #contact{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#contact h2{
-    cursor: pointer;
-    font-family: 'Noto sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 2vh;
-}
-
-#contact form{
     text-align: center;
     font-family: 'Noto sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#contact table{
+    border: 10px solid darkblue;
+    margin: 5vh auto;
+}
+#contact td{
     border: 2px solid darkblue;
-    width: 60vw;
-    height: 60vh;
-    display: grid;
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-columns: 1fr 2fr;
-}
-
-#contact label{
-    border: 2px solid darkblue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-#contact label[for="email"],label[for="tel"],label[for="msg"]{
-    grid-column: 1/2;
-}
-
-#contact textarea{
-    resize: none;
-    background-color: rgb(213, 227, 235);
     font-family: 'Noto sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-#contact input{
-    background-color: rgb(213, 227, 235);
-    font-family: 'Noto sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-#contact input[type="submit"]{
-    grid-column: 1/3;
-    background-color: darkblue;
     font-size: 20px;
-    color: white;
-    cursor: pointer;
-    font-family: poppins, sans-serif;
 }
+
+#contact td > input,textarea {
+    font-size: 20px;
+    font-family: 'Noto sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(220, 232, 245);
+}
+
+#contact td > input[type="submit"]{
+    background-color: darkblue;
+    color: white;
+}
+
+/* styling the last hr tag for bold line */
+
+#last {
+    font-family: 'Noto sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 5vh;
+    margin: auto;
+}
+
+/* styling the back to top button */
 
 #btp{
     padding: 1vh 2vw;
