@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 </head>
 
@@ -26,17 +26,24 @@
         </nav>
     </header>
     <main>
-        <h1>Hello, this is my Portfolio!</h1>
-        <hr>
+        <!-- <h1>Hello, this is my Portfolio!</h1> -->
+        <!-- <hr> -->
         <section id="hero">
-            <h2>About Me:</h2>
+            <div id="heroText">
+                <h2>Hi, I am </h2>
+                <h2 id="fsdText">Full Stack Developer</h2>
+                <p>Building mordern websites and MERN stack applications</p>
+            </div>
             <img src="./Photo.jpeg" alt="Photograph of Lucky Pawar" width="300">
-            <h2>Lucky Pawar</h2>
+        </section>
+        <!-- <hr> -->
+        <section id="about">
+            <h2>About Me:</h2>
             <p>🚀 Hi, I’m a CSE undergrad who loves turning ideas into 💻 code! With skills in 🌐 HTML, 🎨 CSS, ⚡
                 JavaScript, 🐍 Python, and ⚛️ React.js, I enjoy creating cool web experiences ✨ and experimenting with
                 new technologies 🔧. Always learning 📚, always building 🏗️ — coding keeps me excited every day 💡.</p>
-            <hr>
         </section>
+        <!-- <hr> -->
         <section id="projects">
             <h2>Projects</h2>
             <article>
@@ -68,72 +75,54 @@
                     real-time previews, it enables seamless image enhancements. Designed for both quick edits and
                     creative projects, it delivers an efficient and professional editing experience.</p>
             </article>
-            <hr>
+            <!-- <hr> -->
         </section>
         <section id="skills">
             <h2>Skills</h2>
-            <table border="2" cellpadding="13">
-                <thead>
-                    <tr>
-                        <th>Skill</th>
-                        <th>Level</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>HTML</td>
-                        <td>Intermediate</td>
-                    </tr>
-                    <tr>
-                        <td>CSS</td>
-                        <td>Intermediate</td>
-                    </tr>
-                    <tr>
-                        <td>JavaScript</td>
-                        <td>Intermediate</td>
-                    </tr>
-                    <tr>
-                        <td>Python</td>
-                        <td>Proficient</td>
-                    </tr>
-                </tbody>
-            </table>
-            <hr>
+            <div class="tbody">
+                <div class="card bold">Skill</div>
+                <div class="card bold">Level</div>
+                <div class="card">HTML</div>
+                <div class="card">Intermediate</div>
+                <div class="card">CSS</div>
+                <div class="card">Intermediate</div>
+                <div class="card">JavaScript</div>
+                <div class="card">Intermediate</div>
+                <div class="card">Python</div>
+                <div class="card">Proficient</div>
+            </div>
+            <!-- <hr> -->
         </section>
         <section id="contact">
             <h2>Contact Me!</h2>
-            <table>
-                <form>
-                    <tr>
-                        <td><label for="name">Your Name: </label></td>
-                        <td><input type="text" name="name" id="name" placeholder="Enter Your Name" required></td>
-                    </tr>
-                    <tr>
-                        <td><label for="email">Your Email: </label></td>
-                        <td><input type="email" name="emial" id="email" placeholder="Enter Your E-mail" required></td>
-                    </tr>
-                    <tr>
+            <form>
 
-                        <td><label for="tel">Your Phone No.: </label></td>
-                        <td><input type="tel" name="tel" id="tel" pattern="[6-9][0-9]{9}" placeholder="Enter your Phone Number" required></td>
-                    </tr>
-                    <tr>
+                <div><label for="name">Your Name: </label></div>
+                <div><input type="text" name="name" id="name" placeholder="Enter Your Name" required></div>
 
-                        <td><label for="msg">Message: </label></td>
-                        <td><textarea name="msg" id="msg" cols="30" rows="3"
-                            placeholder="Enter your Message">Enter your Message</textarea></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <input type="submit" value="Submit">
-                        </td>
-                    </tr>
-                </form>
-            </table>
-            <hr id="last">
+                <div><label for="email">Your Email: </label></div>
+                <div><input type="email" name="emial" id="email" placeholder="Enter Your E-mail" required></div>
+
+
+                <div><label for="tel">Your Phone No.: </label></div>
+                <div><input type="tel" name="tel" id="tel" pattern="[6-9][0-9]{9}" placeholder="Enter your Phone Number"
+                        required></div>
+
+                <div><label for="msg">Message: </label></div>
+                <div><textarea name="msg" id="msg" cols="30" rows="3"
+                        placeholder="Enter your Message">Enter your Message</textarea></div>
+
+                <div colspan="2">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+            <!-- <hr id="last"> -->
         </section>
         <a id="btp" href="#hero">Back to Top &#8657;</a>
     </main>
+    <footer>
+        <p>&copy; 2025 Lucky Pawar. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
