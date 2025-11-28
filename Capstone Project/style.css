@@ -1,0 +1,896 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: rgb(36, 44, 75);
+    --secondary-color: #28A745;
+    --text-dark: #333;
+    --text-light: #ffffff;
+    --bg-light: #f8f9fa;
+    --font-family: 'Montserrat', sans-serif;
+}
+
+/* --- Global Reset & Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    box-sizing: border-box; 
+}
+
+/* --- 1. Navbar --- */
+header nav {
+    height: auto; 
+    padding: 15px 5%; 
+    background-color: var(--primary-color); 
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.leftNav {
+    font-size: 2rem; 
+    margin: 0; 
+    color: red;
+    cursor: pointer;
+}
+
+.rightNav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+    list-style-type: none;
+    margin-right: 0;
+    font-size: 1rem; 
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.rightNav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.rightNav ul li a:hover {
+    text-decoration: underline solid;
+}
+
+/* --- 2. Hero Section --- */
+#hero {
+    /* Original URL restored */
+    background: url('https://images.unsplash.com/photo-1416331108676-a22ccb276e35?q=80&w=867&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    
+    height: 85vh;
+    min-height: 400px; /* Responsive: minimum height defined */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px 5%;
+}
+
+/* Background overlay for readability */
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#hero .heroTOP, #hero p {
+    z-index: 2; 
+    padding: 4vh 3vw;
+    width: 90%; 
+    max-width: 900px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.65); 
+    margin: 0; 
+}
+
+#hero .heroTOP {
+    border-radius: 2rem 2rem 0 0; 
+    font-size: 2rem;
+}
+
+#hero p {
+    border-radius: 0 0 2rem 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --- 3. Search Filter --- */
+#search-filter {
+    height: auto; 
+    padding: 50px 5%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-light);
+}
+
+#search-filter form {
+    height: auto; 
+    width: 100%;
+    max-width: 800px; 
+    border: 5px solid var(--primary-color); 
+    border-radius: 1rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+    font-size: 1.2rem;
+    padding: 30px;
+}
+
+#search-filter form label[for="useCase"] {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+#search-filter form label {
+    font-weight: 500;
+    align-self: flex-start; 
+    margin-left: 10%;
+}
+
+#search-filter form select {
+    background-color: white;
+    border: 2px solid var(--primary-color); 
+    padding: 15px 20px; 
+    font-size: 1.2rem;
+    width: 80%;
+    border-radius: 5px;
+}
+
+#search-filter input {
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 15px 20px;
+    border: 2px solid var(--primary-color);
+    width: 80%;
+    border-radius: 5px;
+}
+
+#search-filter input[type="submit"] {
+    width: 80%;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#search-filter input[type="submit"]:hover {
+    background-color: #1e7e34;
+}
+
+#search-filter input:focus,
+#search-filter select:focus {
+    outline: 2px solid var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+
+/* --- 4. Property Listings --- */
+#prop_Listing {
+    padding: 60px 5%; 
+}
+
+#prop_Listing h2 {
+    text-align: center;
+    margin: 1rem 0 2rem;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+#propListing { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; 
+    justify-items: center;
+}
+
+#propListing .propCard {
+    width: 100%; 
+    height: auto; 
+    border: 5px solid var(--primary-color);
+    padding: 15px; 
+    text-align: center;
+    cursor: pointer;
+    border-radius: 1rem; 
+    transition: all 500ms;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#propListing .propCard:hover {
+    height: auto; 
+    transform: translateY(-5px);
+    border-radius: 0;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#propListing .propCard:hover img {
+    height: 250px; 
+}
+
+#propListing .propCard img {
+    height: 200px; 
+    width: 100%; 
+    object-fit: cover;
+    transition: all 500ms;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#propListing .propCard p {
+    padding: 0;
+    background-color: transparent;
+    font-size: .9rem;
+    text-align: center;
+}
+#propListing .propCard .price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+#propListing .propCard:hover .price {
+    color: #fff;
+}
+#propListing .propCard h3 {
+    margin-top: 0;
+}
+.features {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 5px;
+}
+#propListing .propCard:hover .features {
+    color: #eee;
+}
+
+/* --- 5. Property Detail Preview --- */
+#prop_DetView {
+    padding: 60px 5%;
+    background-color: var(--bg-light);
+}
+#prop_DetView h2 {
+    text-align: center;
+    margin: 1rem 0 2rem;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+#propDetView { 
+    display: flex; 
+    justify-content: center;
+    gap: 30px; 
+    flex-wrap: wrap; 
+}
+
+.detViewCard {
+    flex-basis: calc(33.33% - 20px); 
+    max-width: 450px; 
+    height: auto; 
+    min-height: 550px; 
+    border: 2px solid var(--primary-color);
+    text-align: center;
+    padding: 20px; 
+    border-radius: 1rem; 
+    transition: all 500ms;
+    cursor: pointer;
+    background-color: white;
+}
+
+.detViewCard img {
+    height: 250px; 
+    width: 100%; 
+    object-fit: cover;
+    transition: all 500ms;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.detViewCard h2 {
+    font-size: 1.6rem; 
+    margin: 0;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.detViewCard h3 {
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin: 5px 0;
+}
+
+.detViewCard p {
+    text-align: left; 
+    background-color: transparent;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+.detViewCard:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    height: auto; 
+    border-radius: 0;
+}
+.detViewCard:hover h2, .detViewCard:hover h3, .detViewCard:hover p {
+    color: white; 
+}
+.detViewCard:hover img {
+    height: 300px; 
+}
+
+
+/* --- 6. Featured Agents --- */
+.featured-agents {
+    background-color: #fff; 
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.featured-agents h2 {
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+.agent-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.agent-card {
+    flex-basis: 300px;
+    background-color: var(--bg-light);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.agent-card:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.agent-card:hover h4,
+.agent-card:hover .agent-role,
+.agent-card:hover .agent-bio {
+    color: white;
+}
+
+.agent-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid var(--primary-color);
+}
+
+.agent-card:hover .agent-avatar {
+    border: 4px solid white;
+}
+
+.agent-card h4 {
+    margin-bottom: 5px;
+    color: var(--text-dark);
+    transition: color 0.3s ease;
+}
+
+.agent-role {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.agent-bio {
+    color: var(--text-dark); 
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+
+/* --- 7. Why Choose Us --- */
+.why-choose-us {
+    padding: 60px 5%;
+    text-align: center;
+    background-color: #fff;
+}
+
+.why-choose-us h2 {
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding-top: 20px;
+}
+
+.benefit-card {
+    padding: 30px 20px;
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-card:hover h5,
+.benefit-card:hover p,
+.benefit-card:hover .icon {
+    color: white;
+}
+
+.benefit-card .icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.benefit-card h5 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+    transition: color 0.3s ease;
+}
+
+.benefit-card p {
+    color: var(--text-dark); 
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+
+/* --- 8. Stats Counter --- */
+#statsCounter {
+    padding: 0; 
+}
+.stats-counter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 5%;
+    background-color: var(--primary-color);
+    color: white;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    min-width: 150px;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.stat-label {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* --- 9. Blog Previews --- */
+.blog-previews {
+    padding: 60px 5%;
+    text-align: center;
+    background-color: var(--bg-light);
+}
+
+.blog-previews h2 {
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.blog-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 20px 15px;
+    text-align: left;
+}
+
+.blog-title {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.blog-title:hover {
+    color: var(--primary-color);
+}
+
+.blog-date {
+    font-size: 0.85rem;
+    color: var(--text-dark); 
+    margin-top: 5px;
+}
+
+
+/* --- 10. Newsletter Signup --- */
+.newsletter-signup {
+    padding: 80px 5%;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+.newsletter-signup h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.newsletter-signup p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    padding: 0; 
+    background: none;
+    border-radius: 0;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.newsletter-form input[type="email"] {
+    flex-grow: 1;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.newsletter-form button {
+    padding: 15px 30px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #1e7e34;
+}
+
+
+/* --- 11. Contact Form --- */
+.contact-form-section {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.contact-form-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.contact-form-section p {
+    margin-bottom: 30px;
+    color: var(--text-dark); 
+    background: none;
+    padding: 0;
+}
+
+.form-container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: var(--bg-light); 
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+.main-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.main-contact-form input[type="text"],
+.main-contact-form input[type="email"],
+.main-contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--text-dark);
+    transition: border-color 0.3s ease;
+}
+
+.main-contact-form input:focus,
+.main-contact-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.main-contact-form textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    padding: 15px 25px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: rgb(29, 36, 61);
+}
+
+
+/* --- 12. Footer --- */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-col {
+    padding-bottom: 30px;
+    flex-basis: 25%;
+    min-width: 200px;
+}
+.about-col {
+    flex-basis: 35%;
+    min-width: 280px;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.footer-col h5 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: white;
+}
+
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: white;
+}
+
+
+.social-links a {
+    color: white;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+}
+
+
+.footer-bottom {
+    border-top: 1px solid rgb(50, 60, 90);
+    text-align: center;
+    padding: 20px 5%;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+
+/* --- Media Queries for Responsiveness --- */
+
+/* Tablet & Smaller Desktop */
+@media (max-width: 1200px) {
+    /* Detail Cards: 2 per row */
+    .detViewCard {
+        flex-basis: calc(50% - 15px);
+    }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    /* Navbar: Stack Logo and Links */
+    header nav {
+        justify-content: center;
+    }
+    .rightNav ul {
+        justify-content: center;
+        margin-top: 15px;
+        gap: 15px;
+    }
+    .rightNav ul li {
+        flex-basis: 30%; 
+        text-align: center;
+    }
+    /* Search Filter: Inputs stack */
+    #search-filter form label {
+        margin-left: 5%;
+    }
+    #search-filter form input, 
+    #search-filter form select {
+        width: 90%;
+    }
+    /* Footer: Two columns per row */
+    .footer-col {
+        flex-basis: 50%;
+    }
+    .about-col {
+        flex-basis: 100%;
+        text-align: center;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    /* Hero: Ensure content defines height */
+    #hero {
+        height: auto; 
+        padding: 40px 5%;
+    }
+    #hero .heroTOP {
+        font-size: 1.5rem;
+        padding: 20px 10px;
+    }
+    #hero p {
+        font-size: 0.9rem;
+        padding: 20px 10px;
+    }
+
+    /* Navbar: Ensure links stack vertically */
+    .rightNav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .rightNav ul li {
+        flex-basis: 100%;
+    }
+    .leftNav {
+        margin-bottom: 10px;
+    }
+
+    /* Detail Cards: 1 per row */
+    .detViewCard {
+        flex-basis: 100%;
+        min-height: auto;
+    }
+    /* Newsletter: Stack inputs */
+    .newsletter-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+    }
+    /* Footer: All columns stack */
+    .footer-col {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .social-links {
+        text-align: center;
+    }
+}

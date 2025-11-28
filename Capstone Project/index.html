@@ -1,11 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The DreamHome</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-    
+    <header>
+        <nav>
+            <div class="leftNav"><i class="fas fa-house"></i></div>
+            <div class="rightNav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Buy</a></li>
+                    <li><a href="#">Rent</a></li>
+                    <li><a href="#">Lease</a></li>
+                    <li><a href="#">Agents</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li id="loginBTN"><a href="#">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="heroTOP">
+                <h1>The DreamHome</h1>
+                <h3>Your search ends here.</h3>
+            </div>
+            <p>The DreamHome is a comprehensive real-estate solutions company dedicated to making property transactions
+                simple, transparent, and stress-free. Whether you’re looking to buy, lease, or rent a home, The
+                DreamHome provides personalised guidance at every step, ensuring you find a space that truly fits your
+                needs and lifestyle. With an extensive database of verified listings, the company helps clients explore
+                a wide range of residential and commercial properties in prime locations. Beyond property search, The
+                DreamHome also streamlines the process of finding reliable real-estate agents, connecting customers with
+                trusted professionals who offer expert advice and market insights. Their mission is to empower buyers,
+                tenants, and investors with accurate information, seamless digital tools, and dedicated support. By
+                combining innovation with customer-centric service, The DreamHome aims to transform the real-estate
+                experience, making it easier than ever to discover, evaluate, and secure your ideal property.</p>
+        </section>
+        <section id="search-filter">
+            <form>
+                <label for="useCase">How can we help you?</label>
+                <select name="useCase" id="useCase">
+                    <option value="">Buy a property</option>
+                    <option value="">Lease a property</option>
+                    <option value="">Rent a property</option>
+                    <option value="">Sell a property</option>
+                </select>
+                <input type="text" placeholder="Enter your preferred location">
+                <label for="locPrice">What is your price range?($)</label>
+                <input type="number" name="locPrice" id="locPrice" value="250000" min="250000"
+                    placeholder="Enter the price in USD ($)">
+                <label for="bedCount">What should be the bedroom count?</label>
+                <input type="number" name="bedCount" id="bedCount" min="1" placeholder="Bedroom count?">
+                <input type="submit" value="Search &#128269;">
+            </form>
+        </section>
+        <section id="prop_Listing">
+            <h2>Famous Properties</h2>
+            <div id="propListing">
+                <div class="propCard">
+                    <img src="./Media/Images/buckingham palace.jpg" alt="Image of Buckingham palace">
+                    <h3>Buckingham Palace</h3>
+                    <p>Buckingham Palace is the official residence of the British monarch, featuring neoclassical
+                        architecture, grand interiors, and extensive gardens. It serves as both a home and working
+                        government building. It's for $ 25,000,000</p>
+                </div>
+                <div class="propCard">
+                    <img src="./Media/Images/burj khalifa.jpg" alt="Image of Burj Khalifa">
+                    <h3>Burj Khalifa</h3>
+                    <p>The Burj Khalifa in Dubai is the world’s tallest building, standing at 828 meters (2,717 feet).
+                        Its sleek, modern design features glass, steel, and concrete, symbolizing innovation and luxury.
+                        It's for $15,000,000</p>
+                </div>
+                <div class="propCard">
+                    <img src="./Media/Images/casa batlo.jpg" alt="Image of casa batlo">
+                    <h3>Casa Batlló</h3>
+                    <p>Casa Batlló is a modernist building in Barcelona, designed by Antoni Gaudí. Its whimsical,
+                        organic architecture features vibrant colors, curved shapes, and intricate details, symbolizing
+                        nature and fantasy.It's for $ 10,000,000</p>
+                </div>
+                <div class="propCard">
+                    <img src="./Media/Images/fallingwater.jpg" alt="Image of Falling water">
+                    <h3>Fallingwater</h3>
+                    <p>Fallingwater, designed by Frank Lloyd Wright, is an iconic house in Pennsylvania built over a
+                        waterfall. Its organic design blends seamlessly with nature, using cantilevered terraces to
+                        integrate the structure with the landscape. It's for $ 5,000,000</p>
+                </div>
+                <div class="propCard">
+                    <img src="./Media/Images/Mar a lago.jpg" alt="Image of Mar a lago">
+                    <h3>Mar-a-Lago</h3>
+                    <p>Mar-a-Lago is a historic mansion in Palm Beach, Florida, originally built by heiress Marjorie
+                        Merriweather Post. It combines Mediterranean Revival architecture with lavish interiors and
+                        expansive grounds. It's for $10,000,000</p>
+                </div>
+                <div class="propCard">
+                    <img src="./Media/Images/trump tower.jpg" alt="Image of trump tower">
+                    <h3>Trump Tower</h3>
+                    <p>Trump Tower is a 58-story skyscraper in New York City, known for its sleek glass façade and
+                        luxury interiors. It houses offices, retail space, and private residences, and serves as the
+                        headquarters of the Trump Organization. It's for $2,000,000</p>
+                </div>
+                <div class="propCard">
+                    <img src="./Media/Images/white house.jpg" alt="Image of white house">
+                    <h3>White house</h3>
+                    <p>The White House is the official residence and workplace of the U.S. President, located in
+                        Washington, D.C. Its neoclassical design features iconic porticos and grand interiors, serving
+                        as both a home and symbol of U.S. government. It's for $ 10,000,000</p>
+                </div>
+            </div>
+        </section>
+        <section id="prop_DetView">
+            <h2>In Detail</h2>
+            <class id="propDetView">
+                <div class="detViewCard">
+                    <img src="./Media/Images/buckingham palace.jpg" alt="Image of Buckingham palace">
+                    <h2>Buckingham Palace</h2>
+                    <h3>Location: The UK</h3>
+                    <h3>Price: $25,000,000</h3>
+                    <p>Buckingham Palace, located in London, is the official residence of the British monarch.
+                        Originally built in 1703 for the Duke of Buckingham, it became the royal residence in 1837
+                        during Queen Victoria’s reign. The palace is renowned for its neoclassical architecture,
+                        featuring a grand façade, lavish interiors, and expansive gardens. It serves as both a home to
+                        the royal family and the venue for important state occasions and ceremonies. The Changing of the
+                        Guard ceremony, held regularly at the palace, is a major tourist attraction. Buckingham Palace
+                        remains an enduring symbol of British monarchy and heritage.</p>
+                </div>
+                <div class="detViewCard">
+                    <img src="./Media/Images/burj khalifa.jpg" alt="Image of Burj Khalifa">
+                    <h2>Burj Khalifa</h2>
+                    <h3>Location: UAE</h3>
+                    <h3>Price: $15,000,000</h3>
+                    <p>The Burj Khalifa, located in Dubai, UAE, is the tallest building in the world, standing at 828
+                        meters (2,717 feet). Completed in 2010, it was designed by architect Adrian Smith and built by
+                        the firm Emaar Properties. The tower's sleek, modern design is inspired by Islamic architecture,
+                        with a series of setbacks that create its distinctive silhouette. It features luxury residences,
+                        corporate offices, and a hotel. The Burj Khalifa also boasts an observation deck with
+                        breathtaking views of Dubai. Its construction symbolizes Dubai’s rapid growth and ambition to
+                        become a global city of innovation and luxury.</p>
+                </div>
+                <div class="detViewCard">
+                    <img src="./Media/Images/casa batlo.jpg" alt="Image of Casa batlo">
+                    <h2>Casa Batlló</h2>
+                    <h3>Location: Spain</h3>
+                    <h3>Price: $10,000,000</h3>
+                    <p>Casa Batlló is a landmark building in Barcelona, Spain, designed by the famous architect Antoni
+                        Gaudí. Completed in 1906, it showcases the Catalan Modernisme style with its whimsical, organic
+                        forms. The façade is a vibrant mosaic of colorful tiles, with curved lines and shapes that evoke
+                        nature, such as bone-like balconies and a dragon-inspired roof. The interior features flowing
+                        spaces and imaginative designs, including intricate woodwork and stained glass. Casa Batlló is a
+                        UNESCO World Heritage site and one of Gaudí’s most celebrated works, drawing visitors from
+                        around the world for its unique beauty.</p>
+                </div>
+                <div class="detViewCard">
+                    <img src="./Media/Images/fallingwater.jpg" alt="Image of falling water">
+                    <h2>Fallingwater</h2>
+                    <h3>Location: The USA</h3>
+                    <h3>Price: $5,000,000</h3>
+                    <p>Fallingwater is an iconic house designed by architect Frank Lloyd Wright, completed in 1939 in
+                        rural Pennsylvania. Built over a waterfall, the house is a prime example of Wright's philosophy
+                        of organic architecture, which seeks to harmonize buildings with their natural surroundings. The
+                        design features cantilevered terraces that extend over the waterfall, allowing the structure to
+                        blend seamlessly with the landscape. Made of stone, steel, and glass, Fallingwater's open, airy
+                        interiors reflect Wright's commitment to connecting the indoors with nature. The house is a
+                        National Historic Landmark and one of the most famous examples of American residential
+                        architecture.</p>
+                </div>
+                <div class="detViewCard">
+                    <img src="./Media/Images/Mar a lago.jpg" alt="Image of mar a lago">
+                    <h2>Mar-a-Lago</h2>
+                    <h3>Location: The USA</h3>
+                    <h3>Price: $10,000,000</h3>
+                    <p>Mar-a-Lago is a historic estate located in Palm Beach, Florida, originally built between 1924 and
+                        1927 by heiress Marjorie Merriweather Post. Designed by architect Marion Sims Wyeth in a
+                        Mediterranean Revival style, the mansion features luxurious interiors, sprawling gardens, and a
+                        private beach. In 1985, it was purchased by Donald Trump, who later transformed it into a
+                        private club and residence. Mar-a-Lago became widely known as a retreat for Trump, hosting
+                        political and social events. It has since become a symbol of wealth and exclusivity, often
+                        associated with both Trump’s business ventures and political activities.</p>
+                </div>
+                <div class="detViewCard">
+                    <img src="./Media/Images/trump tower.jpg" alt="Image of trump tower">
+                    <h2>Trump Tower</h2>
+                    <h3>Location: India</h3>
+                    <h3>Price: $2,000,000</h3>
+                    <p>Trump Tower Gurgaon (now known as Trump Tower Delhi NCR) is a luxury residential project located
+                        in Gurgaon, Haryana, just outside New Delhi, India. Developed by the Tribeca Developers in
+                        collaboration with the Trump Organization, it offers high-end, ultra-modern apartments with
+                        world-class amenities. The tower's design features sleek glass facades, spacious layouts, and
+                        panoramic views of the surrounding cityscape. With 6-star services, it includes features like a
+                        private elevator access, swimming pools, a fitness center, and concierge services. The project
+                        is targeted at high-net-worth individuals seeking luxury living in one of India's most
+                        prestigious real estate markets.</p>
+                </div>
+                <div class="detViewCard">
+                    <img src="./Media/Images/white house.jpg" alt="Image of white house">
+                    <h2>White House</h2>
+                    <h3>Location: The USA</h3>
+                    <h3>Price: $10,000,000</h3>
+                    <p>The White House is the official residence and workplace of the President of the United States,
+                        located at 1600 Pennsylvania Avenue in Washington, D.C. Designed by James Hoban in the
+                        neoclassical style, it was completed in 1800 and has served as the residence of every U.S.
+                        president since John Adams. The White House consists of several wings, including the Executive
+                        Residence, the West Wing (housing the Oval Office), and the East Wing. It is a symbol of U.S.
+                        government and power, hosting state dinners, diplomatic events, and serving as the headquarters
+                        of the U.S. executive branch. Its iconic design and role in American politics make it one of the
+                        most recognized buildings in the world.</p>
+                </div>
+            </class>
+        </section>
+        <section class="featured-agents">
+            <h2>Meet Our Top Featured Agents</h2>
+
+            <div class="agent-cards-container">
+
+                <div class="agent-card">
+                    <img src="https://images.unsplash.com/photo-1602233158242-3ba0ac4d2167?q=80&w=436&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Photo of Agent Sarah Johnson" class="agent-avatar">
+                    <h4>Sarah Johnson</h4>
+                    <p class="agent-role">Senior Broker</p>
+                    <p class="agent-bio">
+                        Specializing in luxury residential properties for over 10 years,
+                        Sarah ensures a seamless buying and selling experience.
+                    </p>
+                </div>
+
+                <div class="agent-card">
+                    <img src="https://images.unsplash.com/photo-1624797432677-6f803a98acb3?q=80&w=386&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Photo of Agent David Chen" class="agent-avatar">
+                    <h4>David Chen</h4>
+                    <p class="agent-role">Investment Specialist</p>
+                    <p class="agent-bio">
+                        Expert in commercial real estate and investment analysis,
+                        David helps clients maximize their portfolio growth.
+                    </p>
+                </div>
+
+                <div class="agent-card">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&fm=jpg&crop=entropy&cs=tinysrgb"
+                        alt="Photo of Agent Maria Garcia" class="agent-avatar">
+                    <h4>Maria Garcia</h4>
+                    <p class="agent-role">Listing Agent</p>
+                    <p class="agent-bio">
+                        Maria has a passion for finding first-time buyers their perfect
+                        home and is known for her exceptional negotiation skills.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+        <section class="why-choose-us">
+            <h2>Why Choose The DreamHome Platform?</h2>
+
+            <div class="benefits-grid">
+
+                <div class="benefit-card">
+                    <i class="icon fas fa-city"></i>
+                    <h5>Extensive Property Portfolio</h5>
+                    <p>Access thousands of verified listings, from cozy apartments to luxurious estates, all updated in
+                        real-time.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <i class="icon fas fa-users"></i>
+                    <h5>Local Market Experts</h5>
+                    <p>Get personalized guidance from our top-rated featured agents with deep local knowledge and proven
+                        success.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <i class="icon fas fa-file-invoice-dollar"></i>
+                    <h5>Transparent Pricing & Fees</h5>
+                    <p>We believe in clear communication. All prices and associated fees are upfront with no hidden
+                        costs.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <i class="icon fas fa-headset"></i>
+                    <h5>Dedicated 24/7 Support</h5>
+                    <p>Our support team is always available to answer your questions and assist you throughout your
+                        journey.</p>
+                </div>
+
+            </div>
+        </section>
+        <section id="statsCounter">
+            <div class="stats-counter">
+
+                <div class="stat-item">
+                    <span class="stat-number">250+</span>
+                    <span class="stat-label">Properties Sold</span>
+                </div>
+
+                <div class="stat-item">
+                    <span class="stat-number">15</span>
+                    <span class="stat-label">Years of Expertise</span>
+                </div>
+
+                <div class="stat-item">
+                    <span class="stat-number">1,500+</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+
+                <div class="stat-item">
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Industry Awards</span>
+                </div>
+
+            </div>
+        </section>
+        <section class="blog-previews">
+            <h2>Latest Real Estate Insights</h2>
+
+            <div class="blog-grid">
+
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1100&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Image of a home interior" class="blog-image">
+                    <div class="blog-content">
+                        <h5><a href="#" class="blog-title">5 Essential Tips for First-Time Home Buyers</a></h5>
+                        <p class="blog-date">Oct 28, 2025</p>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1541423408854-5df732b6f6d1?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Image of city skyline" class="blog-image">
+                    <div class="blog-content">
+                        <h5><a href="#" class="blog-title">The Future of Urban Real Estate: Trends to Watch</a></h5>
+                        <p class="blog-date">Oct 15, 2025</p>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/flagged/photo-1564767609342-620cb19b2357?q=80&w=773&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Image of house keys" class="blog-image">
+                    <div class="blog-content">
+                        <h5><a href="#" class="blog-title">Maximizing Profit: Staging Your Home for a Quick Sale</a>
+                        </h5>
+                        <p class="blog-date">Sep 30, 2025</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="newsletter-signup">
+            <div class="newsletter-content">
+                <h2>Get the Latest Property Updates</h2>
+                <p>Sign up for our newsletter to receive exclusive listings and market reports straight to your inbox.
+                </p>
+
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe Now</button>
+                </form>
+            </div>
+        </section>
+        <section class="contact-form-section">
+            <h2>Contact Our Team</h2>
+            <p>Have questions about a listing or need expert advice? Send us a message!</p>
+
+            <div class="form-container">
+                <form class="main-contact-form">
+
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Mellisa Benoist">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="mellisa.benoist@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required
+                            placeholder="Inquiry about Property ID 1234">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="6" required
+                            placeholder="I am interested in..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button">Send Inquiry</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-col about-col">
+                <div class="footer-logo">DreamHome</div>
+                <p>Your journey to finding the perfect property starts here. We make dreams a reality.</p>
+                <p class="contact-info">
+                    Email: info@dreamhome.com<br>
+                    Phone: (555) 123-4567
+                </p>
+            </div>
+
+            <div class="footer-col links-col">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="#">Property Search</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Agents</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col resources-col">
+                <h5>Resources</h5>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col social-col">
+                <h5>Follow Us</h5>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 DreamHome Real Estate Platform. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
+
 </html>
