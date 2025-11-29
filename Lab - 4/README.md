@@ -23,7 +23,7 @@ This project, named **Prompt Quizzer**, is a simple JavaScript quiz game designe
 ### 🛠️ Submission Details
 
 * **File Name**: `quiz.js`
-* **Repository**: [Link to the GitHub Repository]
+* **Repository**: [\[Link to the GitHub Repository\]](https://github.com/lucky-KRMU/Lab-Assignment-KRMU-Web-Dev-1)
 * **Faculty Submission**: The GitHub repository link is to be shared with the faculty.
 
 ### 💡 Potential Improvements
